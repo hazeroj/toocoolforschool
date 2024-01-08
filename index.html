@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투쿨포스쿨 반응형웹</title>
+</head>
+
+<body>
+    <div>
+        <p>too cool for school
+        </p>
+        <a href="main.html" title="메인화면으로가기">이동하기</a>
+    </div>
+
+</style>
+<script>
+    function window_onload(){
+        setTimeout('go_url()',3000);//알람같은, 내가 원하는 시간만큼 반복 1/1000 = 1초
+    }
+    function go_url(){
+        location.href='main.html'
+    }
+
+    // 함수실행
+    window_onload();
+</script>
+</body>
+
+</html>
