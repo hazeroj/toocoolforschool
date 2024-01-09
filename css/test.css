@@ -1,0 +1,37 @@
+.banner{
+    border: 3px solid red;
+    position: relative;
+}
+
+ul{
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: 0px;
+}
+
+ul li {width: 100%;}
+
+.c_btn{
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #FFF8F2;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.act{
+    background-color: #F7A3A2;
+    width:40px;
+    border-radius: 50%;
+}
+
+.banner div{
+    position: absolute;
+    bottom: 2%;
+    right: 50%;
+    transform: translateX(50%);
+}
+

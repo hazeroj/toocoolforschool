@@ -9,7 +9,7 @@
 }
 
 h1 img {
-    width: 300px;
+    max-width: 300px;
     height: 80px;
 }
 
@@ -48,7 +48,7 @@ address{font-style: normal;font-size: 0.8rem;}
 
 /* top버튼 */
 
-button a{
+button{
     display: inline-block;
     position: fixed;
     right: 100px;
@@ -56,11 +56,11 @@ button a{
     border: 1px solid #fff;
     outline: none;
     background-color: rgba(0,0,0,0.8);
-    color: #fff;
     font-size: 1.2rem;
     padding: 15px;
     border-radius: 50%;
 
 }
-
+button a{
+    color: #fff;}
 button:hover a{color: #F8CAC1;border-color: #F8CAC1;}
