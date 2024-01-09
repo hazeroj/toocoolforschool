@@ -1,0 +1,275 @@
+@charset "utf-8";
+
+@media screen and (max-width:1279px) and (min-width:767px) {
+    body>button {
+        display: none;
+    }
+
+    /* 헤더서식 */
+
+    /* 내비게이션 */
+    .gnb_wrap {
+
+        width: 50%;
+    }
+
+    .gnb>ul {
+        left: 40%;
+    }
+
+    /* 메인서식 */
+    article {
+        width: 85%;
+    }
+
+    /* 베스트 */
+    .best ul:nth-child(3) {
+        padding: 0;
+    }
+
+    .best ul:nth-child(4) {
+        padding: 0;
+    }
+
+    .best_list {
+        max-width: 560px;
+        box-sizing: content-box;
+        overflow: hidden;
+    }
+
+    .best_list li {
+        min-height: 180px;
+        max-width: 180px;
+        width: 32%;
+        margin: 2% 2% 2% 0%;
+    }
+
+    .best_list li:nth-child(3) {
+        margin-right: 0%;
+    }
+
+    .best span {
+        display: inline;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(50%);
+        padding: 15px;
+    }
+
+    .best span:nth-child(2) {
+        left: 0px;
+    }
+
+    .best span:last-child {
+        right: 0px;
+    }
+
+    .best_list li>a {
+        position: relative;
+        min-height: 180px;
+    }
+
+    .best_list li>a>p {
+        line-height: 1.1rem;
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translateY(144.81px);
+
+    }
+
+    /* new */
+
+    .new_list {
+        padding-bottom: 45px;
+    }
+
+    .new>.fa-arrow-left ,
+    .new>.fa-arrow-right {
+        padding: 15px;
+    }
+
+    .new>.fa-arrow-left{
+        left: 10px;
+    }
+
+    .new>.fa-arrow-right{
+        right: 10px;
+    }
+
+    .new_list>li {
+        width: 80%;
+    }
+
+    .new_list>li>div,
+    .new_list>li>p {
+        width: 50%;
+    }
+
+    main>section:nth-child(4) {
+        background-size: 125%;
+
+    }
+
+
+
+    /* only online */
+
+    main>section:nth-child(4)>article{width: 100%;}
+    .only_online ul {
+        width: 90%;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, 180px);
+        grid-template-areas:
+            'a b c'
+            'g g e'
+            'g g f';
+    }
+
+    .only_online>ul>li:nth-child(4),
+    .only_online>ul>li:last-child {
+        display: none;
+    }
+
+    /*  Look*/
+    .look_list {
+        /* grid-template-columns: 40% 27% 27%; */
+        grid-template-rows: repeat(2, 200px);
+
+    }
+
+    .look_list>li:first-child {
+        margin-right: 15px;
+    }
+
+    .look_list>li>a>span:last-child {
+        transform: translateY(0%);
+    }
+
+    .look_list>li>a {
+        line-height: 25px;
+    }
+
+
+    .new_list>li:nth-child(2) {
+        display: none;
+    }
+
+    /* 인스타그램 */
+    main>section:nth-child(6) {
+        background-size: 300%;
+        background-position: left;
+    }
+
+    .insta_list {
+        width: 100%;
+        margin: 0px;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .insta_list li:nth-child(2),
+    .insta_list li:last-child {
+        display: none;
+    }
+
+    .insta_list li:first-child img {
+        animation: insta_a_img 5s linear infinite;
+        right: -30px;
+    }
+
+    @keyframes insta_a_img {
+        0% {
+            top: 0px;
+        }
+
+        25% {
+            top: 20px;
+        }
+
+        50% {
+            top: 0px;
+        }
+
+        75% {
+            top: -10px;
+        }
+
+        100% {
+            top: 0px;
+        }
+    }
+
+    .insta_list li:nth-child(3) {
+        animation: none;
+        transform: translateY(20%);
+    }
+
+
+    .insta_list li:nth-child(3) img {
+        animation: insta_c_img 6s linear infinite;
+
+    }
+
+    @keyframes insta_c_img {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(-10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+
+    }
+
+    .insta_list li:nth-child(4) {
+        margin-right: 20px;
+    }
+
+    .insta_list li:nth-child(4) img {
+        animation: insta_d_img 5s linear infinite;
+    }
+
+    @keyframes insta_d_img {
+        0% {
+            right: 10px;
+        }
+
+        50% {
+            right: 30px;
+        }
+
+        100% {
+            right: 10px;
+        }
+    }   
+
+    /* 푸터서식 */
+
+    .f_inner {
+        width: 85%;
+        grid-template-areas:
+            'f_a f_a f_b'
+            'f_h f_d f_e'
+            'f_c f_c f_c';
+    }
+
+    .f_inner>nav>ul {justify-content: space-between;}
+    .f_inner>.sns {justify-content: center;}
+    footer .f_inner h2 {
+        width: 30%;
+        min-width: 105px;
+        margin: 0px;
+        display: inline;
+        display: flex;
+        align-items: center;
+    }
+
+    .f_inner>.service ,.f_inner>.center {padding: 10px;text-align: center;}
+    .f_inner>.center {align-items: center;}
+}

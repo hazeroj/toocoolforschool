@@ -5,27 +5,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>투쿨포스쿨 반응형웹</title>
+    <link href="./css/reset.css" rel="stylesheet" type="text/css">
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            background-color: #333;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        iframe {
+            width:120%;
+            height: 120vh;
+            border: none;
+            outline: none;
+            position: relative;
+            top: -10%;
+            left: -10%;
+        }
+
+        div{position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100vh;
+            background-color: transparent;
+            z-index: 10;
+        }
+        p {
+            display: inline-block;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            z-index: 100;
+            color: #fff;
+            transform: translateX(-50%);
+            font-size: 6rem;
+            font-weight: 600;
+        }
+
+        a {
+            display: inline-block;
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            z-index: 100;
+            color: #fff;
+            font-size: 2rem;
+            border: 1px solid #fff;
+            padding: 20px 25px;
+            border-radius: 20px;
+            background-color: rgba(0,0,0,0.7);
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 
 <body>
+    <iframe
+        src="https://www.youtube.com/embed/egh316SN9lM?autoplay=1&playsinline=1&controls=0&mute=1&rel=0&fs=1&loop=1&playlist=egh316SN9lM&enablejsapi=1&widgetid=1"
+        title="[투쿨포스쿨] 프로타주 F/W 컬러" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen="1" muted="1" loop="1" autoplay="1"></iframe>
     <div>
-        <p>too cool for school
-        </p>
+        <p>too cool for school</p>
         <a href="main.html" title="메인화면으로가기">이동하기</a>
     </div>
+    </style>
+    <script>
+            function window_onload(){
+                setTimeout('go_url()',4000);//알람같은, 내가 원하는 시간만큼 반복 1/1000 = 1초
+            }
+            function go_url(){
+                location.href='main.html'
+            }
 
-</style>
-<script>
-    function window_onload(){
-        setTimeout('go_url()',3000);//알람같은, 내가 원하는 시간만큼 반복 1/1000 = 1초
-    }
-    function go_url(){
-        location.href='main.html'
-    }
-
-    // 함수실행
-    window_onload();
-</script>
+            // 함수실행
+            window_onload();
+        // </script>
 </body>
 
 </html>
