@@ -1,6 +1,16 @@
 @charset "utf-8";
 
 @media screen and (max-width : 766px) {
+
+    .fa-plus {
+        display: inline;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        color: #F7A3A2;
+        z-index: 800;
+    }
+
     body>button {
         display: none;
     }
@@ -25,15 +35,37 @@
     }
 
     /* 내비게이션서식 */
+    .gnb {
+        padding: 8vh 0px;
+    }
 
     .gnb_wrap {
-        width: 99%;
+        width: 100%;
+        top: 70px;
     }
 
     .gnb>ul {
-        left: 20%;
+        left: 10%;
+        width: 90%;
+    }
 
-        width: 80%;
+    .gnb>ul>li:not(:nth-child(2))>a,
+    .gnb>ul>li>ul>li>a {
+        display: block;
+    }
+
+    .back {
+        transform: skew(0deg);
+        width: 120%;
+    }
+
+    .fa-window-close {
+        color: #fff;
+        position: absolute;
+        top: -6vh;
+        right:4.5%;
+        font-size: 2rem;
+        color: #F7A3A2;
     }
 
     /* 메인서식 */
@@ -42,41 +74,65 @@
     }
 
     .banner {
-        height: 60vh;
         max-height: 700px;
+    }
+
+    .banner ul li {
+
+        background-position: top;
     }
 
     .banner ul li:first-child {
         background-image: url(../images/banner012.jpg);
     }
-    
+
     .banner ul li:nth-child(2) {
         background-image: url(../images/banner022.jpg);
     }
-    
+
     .banner ul li:nth-child(3) {
         background-image: url(../images/banner032.jpg);
     }
-    /* 슬라이드 */
-    .swiper {
-        height: 60vh;
+
+    .banner ul li:first-child p {
+        left: 2%;
+        top: 20%;
+        text-align: left;
     }
 
-    .swiper_wrapper {
-        height: 100%;
+
+    .banner ul li:nth-child(2) p {
+        right: 1%;
+        top: 30%;
     }
 
-    .swiper_wrapper {
-        display: inline-block;
-        height: 100%;
+    .banner ul li:nth-child(2) p span {
+        color: #fff;
+        text-shadow: 0px 0px 5px #444;
     }
 
-    .swiper_slide {
-        height: 100%;
+    .banner ul li:nth-child(3) p {
+        left: 2%;
+        top: 32%;
+        text-align: right;
     }
 
-    .swiper_wrapper img {
-        height: 100%;
+    .banner ul li p span:first-child {
+        font-size: 1.5rem;
+        line-height: 3rem;
+        font-weight: 600;
+    }
+
+    .banner ul li p span:nth-child(3) {
+        font-size: 1.3rem;
+        line-height: 3rem;
+        font-weight: 500;
+    }
+
+    .banner ul li p span:last-child {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        font-weight: 400;
     }
 
     /* 베스트 */
@@ -147,16 +203,18 @@
     }
 
     .new>.fa-arrow-left {
-        left: 10px;
+        left: -5%;
     }
 
     .new>.fa-arrow-right {
-        right: 10px;
+        right: -5%;
     }
 
     .new_list>li {
-        width: 95%;
+        width: 85%;
+        margin: 0px 7.5%;
     }
+    
 
     .new_list>li>div {
         width: 55%;
@@ -166,14 +224,6 @@
         width: 45%;
     }
 
-    .new>.fa-arrow-left,
-    .new>.fa-arrow-right {
-        display: none;
-    }
-
-    .new_list>li:nth-child(2) {
-        display: none;
-    }
 
     /* only online */
     .only_online {
@@ -226,7 +276,7 @@
     }
 
     .look_list>li:first-child {
-        margin-right: 15px;
+        margin: 0px 15px;
     }
 
     .look_list>li>a>span:last-child {
@@ -316,16 +366,27 @@
 
     /* 이벤트서식 */
 
-    /* .event_list {height: 900px;} */
+    main>section:nth-child(7) {
+        height: 600px;
+        padding-bottom: 100px;
+    }
+
+    .event {
+        width: 80%;
+        height: 450px;
+        padding-bottom: 80px;
+    }
+
     .event_list li {
         height: 450px;
         width: 100%;
-        margin: 0%;
+        margin: -0.3%;
         display: inline-block;
     }
 
     .event_list li div {
         height: 90%;
+        margin: 0px auto;
     }
 
     .event_list li p:last-child {
@@ -334,6 +395,28 @@
 
     .event_list li p:first-child {
         display: none;
+    }
+
+    .event>div {
+        position: absolute;
+        bottom: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+
+    .event>div>span {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-color: #FFF8F2;
+        border-radius: 50%;
+        margin: 0px 5px;
+    }
+
+    .event .act {
+        background-color: #292E40;
+        border-radius: 50%;
     }
 
     /* 푸터서식 */
@@ -373,4 +456,9 @@
         display: none;
     }
 
+    .f_inner>.service .fas,
+    .f_inner>.center .fas,
+    address .fas {
+        display: inline;
+    }
 }

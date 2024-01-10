@@ -1,3 +1,12 @@
+section {
+    position: relative;
+}
+
+section>a>.fa-plus {
+    display: none;
+}
+
+
 /* 헤더 서식 */
 header {
     height: 80px;
@@ -65,18 +74,22 @@ header>div>a {
     position: relative;
     top: 0px;
     height: 100vh;
-    padding: 5vh 0px;
+    padding: 4vh 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 8999;
 }
 
+.fa-window-close {
+    display: none;}
+
+
 .back {
     position: absolute;
     top: 0px;
     left: -60px;
-    background-color: rgba(50, 50, 50, 0.7);
+    background-color: rgba(50, 50, 50, 0.9);
     transform: skew(-5deg);
     width: 110%;
     height: 100vh;
@@ -86,7 +99,7 @@ header>div>a {
 /* 검색창 */
 
 .gnb input[type=text] {
-    width: 70%;
+    width: calc(90% - 1.6rem );
     height: 25px;
     text-indent: 1rem;
 }
@@ -248,19 +261,26 @@ section>p {
 }
 
 .banner ul li:first-child p {
-    left: 15%;    top: 20%;
+    left: 15%;
+    top: 20%;
 }
 
 
 .banner ul li:nth-child(2) p {
-    right: 15%;    top: 20%;
+    right: 15%;
+    top: 20%;
 }
 
 
 .banner ul li:nth-child(3) p {
- right: 15%;    top: 20%;
+    right: 15%;
+    top: 20%;
 }
-.banner ul li p span{text-shadow: 0px 0px 5px #fff;}
+
+.banner ul li p span {
+    text-shadow: 0px 0px 5px #fff;
+}
+
 .banner ul li p span:first-child {
     font-size: 2.2rem;
     line-height: 5rem;
@@ -412,22 +432,28 @@ main>section:nth-child(3) {
 
 .new_list {
     margin: 0px auto;
-    display: flex;
-    justify-content: space-around;
     padding-bottom: 50px;
     padding-left: 30px;
     box-sizing: border-box;
     max-width: 1100px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 
 .new_list>li {
-    display: flex;
+    display: inline-flex;
     text-align: center;
-    width: 100%;
+    width: 45%;
+    padding: 0px;
     justify-content: space-between;
     height: 360px;
 }
+
+.new_list>li:first-child {
+    margin-right: 3%;
+}
+
 
 .new_list>li>div {
     background-position: center !important;
@@ -643,6 +669,7 @@ main>section:nth-child(5) {
     border: none;
     font-size: 40px;
     color: #F8CAC1;
+    transform: translateY(-50%);
 }
 
 .look_list .fa-angle-left {
@@ -669,6 +696,7 @@ main>section:nth-child(5) {
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
+    position: relative;
 }
 
 .look_list>li>a {
@@ -979,12 +1007,18 @@ main>section:nth-child(7) {
     background-color: #F8CAC1;
 }
 
+.event {
+    overflow: hidden;
+    height: 480px;
+    max-width: 1000px;
+}
+
 .event_list {
     width: 100%;
-    max-width: 1000px;
     margin: 0px auto;
     white-space: nowrap;
-    overflow: hidden;
+    position: absolute;
+    left: 0px;
 }
 
 .event_list li {
@@ -993,10 +1027,9 @@ main>section:nth-child(7) {
     margin-right: 2%;
     display: inline-block;
     transition: 1s;
-    box-shadow: 0px 0px 6px #ccc;
     position: relative;
 }
-
+.event_list li:last-child{    margin-right: 0%;}
 .event_list li a {
     display: inline-block;
     height: 450px;
@@ -1064,6 +1097,10 @@ main>section:nth-child(7) {
 
 .event_list li:hover p:last-child {
     font-weight: 600;
+}
+
+.event>div>span {
+    display: none;
 }
 
 /* 푸터 서식 */
@@ -1185,4 +1222,10 @@ footer * {
 .f_inner>.service>li a:hover,
 .f_inner>.center a:hover {
     border-bottom: 1px solid #FFF8F2;
+}
+
+.f_inner>.service .fas,
+.f_inner>.center .fas,
+address .fas {
+    display: none;
 }

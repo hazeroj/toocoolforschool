@@ -1,16 +1,24 @@
 $('document').ready(function () {
 
     // 내비게이션 등장
-    $('.fa-bars').mouseenter(function () {
-        $('.gnb_wrap').css({ 'left': '0px' })
+
+    $('.fa-bars').click(function () {
+        $('.gnb_wrap').toggleClass('left');
     })
 
-    $('.gnb_wrap').mouseleave(function () {
-        $('.gnb_wrap').css({ 'left': '-1000px' })
-    }
+    $('.fa-window-close').click(function(){
+        $('.gnb_wrap').removeClass('left').css('left','-1000px')
+    })
 
-    )
+    $('.fa-bars').mouseover(function(){
+        $('.gnb_wrap').css('left','0px')
+    })
+    $('.gnb_wrap').mouseleave(function(){
+        $('.gnb_wrap').css('left','-1000px')
+    })
 
+
+    ////////////////////////////////////////////////////////////
 
     // 메인 배너
 
@@ -47,7 +55,7 @@ $('document').ready(function () {
             $('.banner>div>span').removeClass('act');
             $('.banner>div>span').eq(n).addClass('act');
         } else {
-            n++; 
+            n++;
             $('.banner>div>span').removeClass('act');
             $('.banner>div>span').eq(n).addClass('act');
         }
@@ -55,6 +63,55 @@ $('document').ready(function () {
         mslide(n);
     }, 4000);
 
+    ////////////////////////////////////////////////////////////
 
+    // LOOK
+    const n_r_btn = $('.look_list>li .fa-angle-right');
+    const n_l_btn = $('.look_list>li .fa-angle-left');
+    let w = 1
+
+    n_l_btn.click(function () {
+        // console.log('눌림')
+        // $('.look_list>li:first-child>div ').css('background-image','url(./images/LOOK01.jpg)');
+
+        if (w == 1) {
+            w = 4
+        } else {
+            w--;
+        }
+        $('.look_list>li:first-child>div').css('background-image', 'url(./images/LOOK0' + w + '.jpg)');
+
+    })
+
+    n_r_btn.click(function () {
+        // console.log('눌림')
+
+        if (w < 4) {
+            w++;
+        } else {
+            w = 1;
+        }
+        $('.look_list>li:first-child>div').css('background-image', 'url(./images/LOOK0' + w + '.jpg)');
+    })
+
+    ////////////////////////////////////////////////////////////
+
+    // 이벤트
+
+    const c_btn2 = $('.event>div>span');
+    let ii;
+
+    c_btn2.click(function () {
+        ii = $(this).index();
+        console.log(ii);
+
+        ii = -(ii * ($('.event_list>li').width()));
+        console.log(ii);
+
+        $('.event_list').animate({ 'left': ii }, 400);
+
+        $('.event>div>span').removeClass('act');
+        $(this).addClass('act');
+    });
 
 });

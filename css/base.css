@@ -64,3 +64,8 @@ button{
 button a{
     color: #fff;}
 button:hover a{color: #F8CAC1;border-color: #F8CAC1;}
+
+
+.left{left: 0px !important;}
+
+.right{left: -1000px !important;}
