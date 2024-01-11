@@ -33,39 +33,59 @@ h1 img {
     color: #fff;
 }
 
-h2{
+h2 {
     font-size: 1.1rem;
     font-weight: 600;
 }
 
-.hashtag{
+.hashtag {
     color: #747474;
 }
 
-a{text-decoration: none; color:#333}
+a {
+    text-decoration: none;
+    color: #333
+}
 
-address{font-style: normal;font-size: 0.8rem;}
+address {
+    font-style: normal;
+    font-size: 0.8rem;
+}
 
 /* top버튼 */
 
-button{
+button {
     display: inline-block;
     position: fixed;
     right: 100px;
     bottom: 100px;
     border: 1px solid #fff;
     outline: none;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     font-size: 1.2rem;
     padding: 15px;
     border-radius: 50%;
 
+    color: #fff;
+    opacity: 0;
+    visibility: hidden;
 }
-button a{
-    color: #fff;}
-button:hover a{color: #F8CAC1;border-color: #F8CAC1;}
+
+.appear {
+    opacity: 1;
+    visibility: visible;
+}
+
+button:hover {
+    color: #F8CAC1;
+    border-color: #F8CAC1;
+}
 
 
-.left{left: 0px !important;}
+.left {
+    left: 0px !important;
+}
 
-.right{left: -1000px !important;}
+.right {
+    left: -1000px !important;
+}
