@@ -1,6 +1,6 @@
 @charset "utf-8";
 
-@media screen and (max-width : 766px) {
+@media screen and (max-width : 767px) {
 
     .fa-plus {
         display: inline;
@@ -281,6 +281,10 @@
         margin: 0px 15px;
     }
 
+    .look_list>li div{
+        background-position: top !important;
+
+    }
     .look_list>li>a>span:last-child {
         transform: translateY(0%);
     }
