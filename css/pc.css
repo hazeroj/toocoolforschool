@@ -180,6 +180,8 @@ header>div>a {
     text-decoration: underline;
 }
 
+.gnb>ul>li>.fa-window-close{display: none;}
+
 /* 메인 서식 */
 main {
     background-color: #292E40;
@@ -209,6 +211,7 @@ article>h2 {
 section>p {
     padding: 25px 0px 60px 0px;
     font-weight: 500;
+    font-size: 1.2rem;
 }
 
 /* 메인배너서식 */
@@ -305,8 +308,8 @@ section>p {
 
 .banner .c_btn {
     display: inline-block;
-    height: 25px;
-    width: 25px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
     background-color: #FFF8F2;
     transition: 0.3s;
@@ -314,9 +317,9 @@ section>p {
 }
 
 .banner .act {
-    background-color: #F7A3A2;
-    width: 40px;
-    border-radius: 50%;
+    background-color: #a33331;
+    width: 25px;
+    border-radius: 10px;
 }
 
 .banner>div {
@@ -499,6 +502,7 @@ main>section:nth-child(3) {
     align-items: center;
     width: 40%;
     padding-right: 4%;
+    font-size: 1.1rem;
 }
 
 .new_list>li>p>a {
@@ -506,12 +510,11 @@ main>section:nth-child(3) {
     padding: 10px;
     border: 1px solid #ccc;
     cursor: pointer;
-}
-
-.new_list>li>p>a:hover {
     background-color: #292E40;
     color: #FFF8F2;
+    font-size: 1rem;
 }
+
 
 /* 좌우 화살표 */
 
@@ -562,7 +565,6 @@ main>section:nth-child(4) {
 
 .only_online ul>li {
     overflow: hidden;
-    transition: 0.5s;
 }
 
 .only_online>ul>li>a {
@@ -576,11 +578,11 @@ main>section:nth-child(4) {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: 0.5s;
 }
 
 .only_online>ul>li>a>div:hover {
     transform: scale(1.1);
-    transition: 0.5s;
 }
 
 .only_online>ul>li:first-child {
@@ -652,7 +654,6 @@ main>section:nth-child(4) {
 
 .only_online>ul>li {
     position: relative;
-    box-shadow: 0px 0px 10px #fff;
 }
 
 .only_online>ul>li>a>p {
@@ -832,7 +833,7 @@ main>section:nth-child(5) {
 /* 인스타그램 서식 */
 main>section:nth-child(6) {
     background-image: url('../images/insta_back.png');
-    background-size: 120%;
+    background-size: 200%;
     background-position: center;
     background-attachment: fixed;
     box-sizing: border-box;
@@ -1007,8 +1008,7 @@ main>section:nth-child(6) {
 }
 
 .insta_list li a img {
-    box-shadow: 0px 0px 5px #fff;
-
+    border: 5px solid #fff;
 }
 
 
